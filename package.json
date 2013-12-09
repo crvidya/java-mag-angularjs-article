@@ -19,5 +19,8 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/angularjs-de/jm0314/issues"
+  },
+  "devDependencies": {
+    "karma": "0.10.8"
   }
 }
