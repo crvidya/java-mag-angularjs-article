@@ -1,0 +1,23 @@
+{
+  "name": "jm0314",
+  "version": "0.0.1",
+  "homepage": "https://github.com/angularjs-de/jm0314",
+  "authors": [
+    "Robin Böhm <robinboehm@googlemail.com>"
+  ],
+  "description": "Examples for the article",
+  "keywords": [
+    "angularjs",
+    "article",
+    "examples"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
