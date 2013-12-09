@@ -1,13 +1,15 @@
 {
-  "name": "jm0314",
+  "name": "ng-cube",
   "version": "0.0.1",
   "homepage": "https://github.com/angularjs-de/jm0314",
   "authors": [
-    "Robin Böhm <robinboehm@googlemail.com>"
+    "Robin Böhm <robinboehm@googlemail.com>",
+    "Philipp Tarasiewicz <philipp.tarasiewicz@googlemail.com>"
   ],
-  "description": "Examples for the article",
+  "description": "Example AngularJS project with a CSS3 Cube",
   "keywords": [
     "angularjs",
+    "css3",
     "article",
     "examples"
   ],
