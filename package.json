@@ -1,0 +1,23 @@
+{
+  "name": "jm0314",
+  "version": "0.0.1",
+  "description": "Examples for the article",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/angularjs-de/jm0314.git"
+  },
+  "keywords": [
+    "angularjs",
+    "article",
+    "examples"
+  ],
+  "author": "Robin Böhm, Philipp Tarasiewicz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/angularjs-de/jm0314/issues"
+  }
+}
