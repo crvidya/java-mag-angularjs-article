@@ -29,4 +29,10 @@ describe("A initial project", function(){
         expect(repeater('div > input[type="range"]').count()).toBe(3);
     });
 
+    it("should contain three input-elements with bindings to x,y and z",function(){
+        expect(input('x').val()).toBeDefined();
+        expect(input('y').val()).toBeDefined();
+        expect(input('z').val()).toBeDefined();
+    });
+
 });
