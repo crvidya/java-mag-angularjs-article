@@ -24,4 +24,9 @@ describe("A initial project", function(){
         expect(element('div.wrap > .cube > .back').html()).toBeDefined();
     });
 
+    it("should contain three input-elements of type range",function(){
+        expect(element('div > input').html()).toBeDefined();
+        expect(repeater('div > input[type="range"]').count()).toBe(3);
+    });
+
 });
