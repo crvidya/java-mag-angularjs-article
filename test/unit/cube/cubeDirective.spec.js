@@ -79,8 +79,10 @@ describe("A Cube-Directive", function () {
         var cubeA = element,
             cubeB = element.next();
 
-        var scopeA = cubeA.scope(),
-            scopeB = cubeB.scope();
+        $rootScope.$apply();
+
+        var scopeA = angular.element(cubeA.children()).scope(),
+            scopeB = angular.element(cubeB.children()).scope();
 
         expect(scopeA.$id).not.toBe(scopeB.$id);
     });
