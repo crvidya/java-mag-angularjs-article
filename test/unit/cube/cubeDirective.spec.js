@@ -71,4 +71,18 @@ describe("A Cube-Directive", function () {
 
     });
 
+    it("should create an own scope", function () {
+        var scope = $rootScope.$new();
+
+        var element = $compile('<cube id="A"></cube><cube id="B"></cube>')(scope);
+
+        var cubeA = element,
+            cubeB = element.next();
+
+        var scopeA = cubeA.scope(),
+            scopeB = cubeB.scope();
+
+        expect(scopeA.$id).not.toBe(scopeB.$id);
+    });
+
 });
