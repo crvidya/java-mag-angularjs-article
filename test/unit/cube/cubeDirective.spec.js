@@ -33,11 +33,7 @@ describe("A Cube-Directive", function () {
             testString;
         var scope = $rootScope.$new();
 
-        scope.x = 1;
-        scope.y = 2;
-        scope.z = 3;
-
-        var element = $compile('<cube></cube>')(scope);
+        var element = $compile('<cube init-x="1" init-y="2" init-z="3"></cube>')(scope);
 
         $rootScope.$apply();
 
@@ -52,9 +48,10 @@ describe("A Cube-Directive", function () {
 
         expect(element.find('div.perspective > div.cube').attr("style")).toBe(testString);
 
-        scope.x = 101;
-        scope.y = 102;
-        scope.z = 103;
+        var cubeScope = angular.element(element.children()).scope();
+        cubeScope.x = 101;
+        cubeScope.y = 102;
+        cubeScope.z = 103;
 
         $rootScope.$apply();
 
@@ -85,6 +82,26 @@ describe("A Cube-Directive", function () {
             scopeB = angular.element(cubeB.children()).scope();
 
         expect(scopeA.$id).not.toBe(scopeB.$id);
+    });
+
+    it("should create an isolated scope", function () {
+        var scope = $rootScope.$new();
+
+        scope.x = 1;
+
+        var element = $compile('<cube id="A"></cube><cube id="B"></cube>')(scope);
+
+        $rootScope.$apply();
+
+
+        var cubeA = element,
+            cubeB = element.next();
+        var scopeA = angular.element(cubeA.children()).scope(),
+            scopeB = angular.element(cubeB.children()).scope();
+
+        expect(scopeA.$id).not.toBe(scope.$id);
+        expect(scopeB.x).not.toBe(scope.x);
+
     });
 
 });
