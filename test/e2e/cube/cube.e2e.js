@@ -35,4 +35,21 @@ describe("A initial project", function(){
         expect(input('z').val()).toBeDefined();
     });
 
+    it("should bind x,y,z to css attribute transform of the cube",function(){
+        var testTemplate = "-webkit-transform: rotateX({{x}}deg) rotateY({{y}}deg) rotate({{z}}deg)",
+            testString;
+
+        expect(element('.cube').css("-webkit-transform")).toBeDefined();
+
+        testString = testTemplate.replace("{{x}}","").replace("{{y}}","").replace("{{z}}","");
+        expect(element('.cube').attr("style")).toBe(testString);
+
+        input('x').enter("1");
+        input('y').enter("2");
+        input('z').enter("3");
+
+        testString = testTemplate.replace("{{x}}","1").replace("{{y}}","2").replace("{{z}}","3");
+        expect(element('.cube').attr("style")).toBe(testString);
+    });
+
 });
