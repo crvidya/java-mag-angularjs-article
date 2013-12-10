@@ -13,15 +13,15 @@ describe("A initial project", function(){
     });
 
     it("should contain cube html-elements",function(){
-        expect(element('div.wrap').html()).toBeDefined();
-        expect(element('div.wrap > .cube').html()).toBeDefined();
-        expect(repeater('div.wrap > .cube >').count()).toBe(6);
-        expect(element('div.wrap > .cube > .left').html()).toBeDefined();
-        expect(element('div.wrap > .cube > .right').html()).toBeDefined();
-        expect(element('div.wrap > .cube > .top').html()).toBeDefined();
-        expect(element('div.wrap > .cube > .bottom').html()).toBeDefined();
-        expect(element('div.wrap > .cube > .front').html()).toBeDefined();
-        expect(element('div.wrap > .cube > .back').html()).toBeDefined();
+        expect(element('div.perspective').html()).toBeDefined();
+        expect(element('div.perspective > .cube').html()).toBeDefined();
+        expect(repeater('div.perspective > .cube >').count()).toBe(6);
+        expect(element('div.perspective > .cube > .left').html()).toBeDefined();
+        expect(element('div.perspective > .cube > .right').html()).toBeDefined();
+        expect(element('div.perspective > .cube > .top').html()).toBeDefined();
+        expect(element('div.perspective > .cube > .bottom').html()).toBeDefined();
+        expect(element('div.perspective > .cube > .front').html()).toBeDefined();
+        expect(element('div.perspective > .cube > .back').html()).toBeDefined();
     });
 
 });
