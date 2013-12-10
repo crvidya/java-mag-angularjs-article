@@ -15,16 +15,16 @@ describe("A Cube-Directive", function () {
 
         expect(element.html()).toBeDefined();
         expect(element.find("input").length).toBe(3);
-        expect(element.find('div.wrap').length).toBe(1);
-        expect(element.find('div.wrap > div.cube').length).toBe(1);
-        expect(element.find('div.wrap > div.cube').children().length).toBe(6);
+        expect(element.find('div.perspective').length).toBe(1);
+        expect(element.find('div.perspective > div.cube').length).toBe(1);
+        expect(element.find('div.perspective > div.cube').children().length).toBe(6);
 
-        expect(element.find('div.wrap > div.cube .front').html()).toBeDefined();
-        expect(element.find('div.wrap > div.cube .back').html()).toBeDefined();
-        expect(element.find('div.wrap > div.cube .top').html()).toBeDefined();
-        expect(element.find('div.wrap > div.cube .left').html()).toBeDefined();
-        expect(element.find('div.wrap > div.cube .right').html()).toBeDefined();
-        expect(element.find('div.wrap > div.cube .bottom').html()).toBeDefined();
+        expect(element.find('div.perspective > div.cube .front').html()).toBeDefined();
+        expect(element.find('div.perspective > div.cube .back').html()).toBeDefined();
+        expect(element.find('div.perspective > div.cube .top').html()).toBeDefined();
+        expect(element.find('div.perspective > div.cube .left').html()).toBeDefined();
+        expect(element.find('div.perspective > div.cube .right').html()).toBeDefined();
+        expect(element.find('div.perspective > div.cube .bottom').html()).toBeDefined();
     });
 
 
@@ -50,7 +50,7 @@ describe("A Cube-Directive", function () {
             .replace("{{y}}", "2")
             .replace("{{z}}", "3");
 
-        expect(element.find('div.wrap > div.cube').attr("style")).toBe(testString);
+        expect(element.find('div.perspective > div.cube').attr("style")).toBe(testString);
 
         scope.x = 101;
         scope.y = 102;
@@ -67,7 +67,7 @@ describe("A Cube-Directive", function () {
             .replace("{{y}}", "102")
             .replace("{{z}}", "103");
 
-        expect(element.find('div.wrap > div.cube').attr("style")).toBe(testString);
+        expect(element.find('div.perspective > div.cube').attr("style")).toBe(testString);
 
     });
 
