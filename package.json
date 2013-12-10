@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "pretest": "http-server app/ & echo $! > pid",
-    "test": "karma start --single-run --browsers PhantomJS;karma start karma.e2e.conf.js --single-run --browsers PhantomJS;",
+    "test": "karma start --single-run --browsers PhantomJS",
     "posttest": "kill `cat pid`;rm pid"
   },
   "repository": {
