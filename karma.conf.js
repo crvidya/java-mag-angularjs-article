@@ -14,7 +14,13 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'test/unit/**/*.js'
+      'test/lib/jquery/jquery.js',
+      'app/lib/angular/angular.js',
+      'test/lib/angular-mocks/angular-mocks.js',
+      'app/scripts/**/module.js',
+      'app/scripts/**/*.js',
+      'test/unit/**/*.js',
+      'app/**/*.html'
     ],
 
 
@@ -63,6 +69,15 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit
-    singleRun: true
+    singleRun: true,
+
+    preprocessors: {
+        'app/**/*.html': 'ng-html2js'
+      },
+
+    ngHtml2JsPreprocessor: {
+        stripPrefix: 'app/',
+        moduleName: 'templates'
+    }
   });
 };
