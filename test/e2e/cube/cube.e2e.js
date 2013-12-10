@@ -41,7 +41,7 @@ describe("A initial project", function(){
 
         expect(element('.cube').css("-webkit-transform")).toBeDefined();
 
-        testString = testTemplate.replace("{{x}}","").replace("{{y}}","").replace("{{z}}","");
+        testString = testTemplate.replace("{{x}}","0").replace("{{y}}","0").replace("{{z}}","0");
         expect(element('.cube').attr("style")).toBe(testString);
 
         input('x').enter("1");
